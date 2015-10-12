@@ -10,6 +10,12 @@ var app = angular.module('projects-app', ['ui.router', 'ngResource', 'ui.bootstr
 					controllerAs: 'LayoutCtrl',
 					redirectTo: 'home.start'
 				})
+				.state('project',{
+					url: 'project/:project_id',
+					templateUrl: './templates/project_single/project.html',
+					controller: 'ProjectCtrl',
+					controllerAs: 'ProjectCtrl',
+				})
 				.state('home.start', {
 					url: '/',
 					templateUrl: './templates/home/homepage.html',
