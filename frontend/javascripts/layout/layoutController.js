@@ -2,26 +2,14 @@ var app = require('../app');
 
 app.controller('LayoutController', LayoutController);
 
-function LayoutController(dataFactory) {
+LayoutController.$inject = [];
+
+function LayoutController() {
 	var vm = this;
-	/*vm.mongoData = dataFactory.query(function(){
-		console.log(vm.mongoData);
-	});*/
-	vm.mongoData = {};
-	vm.getMongoData = getMongoData;
-	activate();
-	function activate(){
-		return getMongoData().then(function() {
-			console.log(vm.mongoData);
-		});
-	}
-	function getMongoData(){
-		return dataFactory.getMongoData().then(function(data){
-			vm.mongoData = data;
-			return vm.mongoData;
+	
+	vm.init = function(){
 
-		});
-	}
+	};
 
-	console.log(vm.mongoData);
+	vm.init();
 }
