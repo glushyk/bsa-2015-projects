@@ -10,9 +10,11 @@ var app = angular.module('projects-app', ['ui.router', 'ngResource', 'ui.bootstr
 					controllerAs: 'LayoutCtrl',
 					redirectTo: 'home.start'
 				})
-				.state('home.start', {
-					url: '/',
-					templateUrl: './templates/home/homepage.html',
+				.state('home.start',{
+					url:'/',
+					templateUrl : './templates/home/homepage.html',
+					controller: 'ProjectListController',
+					controllerAs: 'ListCtrl'
 				});
 		}
 	]);
