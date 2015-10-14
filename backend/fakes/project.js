@@ -15,7 +15,7 @@ casual.define('project_', function() {
 		begin: casual.date(format = 'YYYY-MM-DD'),
 		end: casual.date(format = 'YYYY-MM-DD'),
 		tags: casual.array_of_words(n = 4),
-		stage: casual.random_element([done, inProgres])
+		stage: casual.random_element(['done', 'inProgres']),
 		screenshots: casual.array_of_words(n = 4)  // casual.js haven't avatar or pictures
 	};
 });

@@ -12,7 +12,7 @@ casual.define('user_', function() {
 		_id: id,
 		name: name,
 		surname: surname,
-		avatar: avatar;
+		avatar: avatar
 	};
 });
 
